@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+
+<meta name="vieport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Jay the doggo</title>
+
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+        body {
+            background-color:burlywood
+        }
+        
+        .container {
+            position: relative;
+            width:90%;
+            width: 1375px;
+            margin:  auto;
+            padding-top: 700px;
+        }
+
+
+        #Jay-picture {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: auto;
+            width: 80%;
+            max-width: 500px;
+            object-fit: cover;
+            border-radius: 35%;
+            z-index: 1000;
+ 
+        }
+
+         .content {
+            position:relative;
+            width:  inherit;
+            height: 1486px;
+            background-color: #EAE285;
+            border-radius: 200px;
+            color:burlywood;
+            margin-top: 0;
+            z-index: 1;
+
+        }
+
+         .container > nav {
+            background-color: #EAE285;
+            border: burlywood;
+        }
+
+         a  button {
+            background-color:burlywood;
+
+
+            font-family: "Irish Grover";
+            width: 321px;
+            height: 151px;
+            border-radius: 200px;
+            text-align: center;
+            border-color: burlywood;
+            border-width: 0px;
+            border-style: none;
+
+
+         }
+
+         a  button {
+            color: #FFF;
+            font-family: "Irish Grover";
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: lowercase;
+            text-decoration: none;
+         }
+
+        a:hover  button {
+            color: #FFF;
+            font-family: "Irish Grover";
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: lowercase;
+            text-decoration: none;
+            letter-spacing: 5px;
+
+         }
+
+        a:active button {
+
+            background-color: #EAE285;
+            color:darkgoldenrod;
+            font-family: "Irish Grover";
+            font-size: 50px;
+            font-weight: 800;
+            text-decoration: none;
+            border-color: burlywood;
+            border-width: 1px;
+            border-style: solid;
+
+         }
+
+         #Jay {
+            background-color: inherit;
+            color: burlywood;
+            font-family: "Irish Grover";
+            font-size: 64px;
+            font-weight: 800;
+            line-height: normal;
+            text-align: center;
+            margin-top: 60px;
+         }
+
+         #sectionHeadings
+
+         {
+            background-color:inherit;
+            color:burlywood;
+            font-family: "Irish Grover";
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-right: auto;
+            margin-right: auto; 
+            text-align:center;
+            margin-top: 100px;   
+            
+         }
+
+         #about {
+            font-family: "Irish Grover";
+            font-size: 50px;
+            font-weight: 400;
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            line-height: 1.4;
+            font-weight: 590;
+            margin-top: -70px;
+
+         }
+
+         #about::first-letter {
+            font-family: "Irish Grover";
+            font-size: 80px;
+            font-weight: 700;
+            font-style: oblique;
+
+         }
+
+         body, nav {
+            margin: 0;
+            padding:0;
+         }
+
+         #navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+         }
+
+
+         @media (max-width: 440px) {
+
+            .container {
+                width: 100%;
+                padding-top: 400%;
+            }
+        
+            #Jay Picture{
+             width: 70%;
+            max-width: 350px;
+            }
+
+            .content {
+                border-radius: 50%;
+                height: auto;
+                padding: 20px;
+            }
+
+            #navigation {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            a button {
+                width: 200px;
+                height: 80px;
+                font-size: 32%;
+            }
+
+            #Jay, #sectionHeadings, #about {
+                font-size: 40px;
+                text-align: center;
+            }
+
+   
+        }
+            
+         
+
+         
+
+
+
+
+    </style>
+
+</head>
+
+<body >
+
+    <section class="container">
+        <img src="./SunBathJay.png" id="Jay-picture" alt="A picture of a golden blonde dog named Jay">
+
+        <section class="content">
+
+            <nav id="navigation">
+                
+            <a href="#about"><button>About</button></a>
+            <a href="#why"><button>Why</button></a>
+            <a href="#contact"><button>Contact</button></a>
+                
+                
+            </nav>
+
+
+         
+
+            <header id="Jay">Jay the Sunshine Doggo</header>
+
+            <p id="sectionHeadings">About Jay</p>
+
+            
+
+            <section id="about">
+               
+                He is a happy sunshine dog. <br>
+                Hes here to spread joys and smiles.
+                
+            </section>
+
+
+
+
+            <section id="why">
+
+            </section>
+
+
+
+
+
+            <section id="contact">
+
+            </section>
+
+
+
+
+
+
+        </section>
+
+
+    </section>
+
+   
+
+</body>
+
+
+</html>
