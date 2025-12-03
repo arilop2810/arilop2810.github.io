@@ -353,18 +353,18 @@ h1 {
 /* //gradients...im not sure if i should keep that top one ?? */
 #grad1 {
   height: 100px;
-  background-color: red; /* For browsers that do not support gradients */
+  background-color:#4D0E1C; /*//default color for non gradient */
   background-image: linear-gradient(to bottom,#4D0E1C,#fffacdcb);
 }
 
 #grad2 {
   height: 150px;
-  background-color: red; /* For browsers that do not support gradients */
+  background-color:#4D0E1C; 
   background-image: linear-gradient(to bottom,#fffacdcb,#4D0E1C);
 }
 #grad3 {
   height: 350px;
-  background-color: red; /* For browsers that do not support gradients */
+  background-color:#4D0E1C; 
   background-image: linear-gradient(to bottom,#4D0E1C,#fffacdcb);
 }
 
