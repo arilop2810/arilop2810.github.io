@@ -4,7 +4,7 @@
 //updates caption
 
 
-
+// Once again, I heavily relied on studying the example on W3 schools as a reference for my project
 //set slideshow to show the first image once the page loads//
 let slideIndex = 1;
 showSlides(slideIndex);
