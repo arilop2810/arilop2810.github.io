@@ -1,0 +1,246 @@
+<!-- I referenced heavily on the W3 schools website as inspiration for my final project here https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Irish+Grover&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./FinalProjectStyle.css">
+    <title>Jay the Awesome Doggo</title>
+</head>
+<body>
+
+    <!--- NAVIGATION BUTTONS HERE-->
+    
+        <!-- I wanted to add decoration elements, they were slightly difficult to figure out in CSS so i put some of its edits here, after figuring out how the gradients worked, I followed these up in a similar way -->
+          <div class="DecorationImage">
+            <img src="star-rectangle-8.png" alt="">
+        </div>
+        <div class="StarsDecoration" style="top: 160px;left: 50%; transform: translateX(-50%);">
+            <img src="five-stars.png" alt="">
+        </div>
+
+        <div class="StarsDecoration" style="top: 900px;left: 50%; transform: translateX(-50%);">
+            <img src="five-stars.png" alt="">
+        </div>
+
+
+     <div id="grad2"></div>
+
+    <div class="layout">
+
+        <nav class="LeftNav">
+            <div class="NavBox">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#Video">Video</a></li>
+            </ul>
+            </div>
+        </nav>
+        <!--NAVIGATION END-->
+
+        <!-- Title/SubTitle -->
+        <div id="Home" class="CenterColumn">
+            <header id="heading">Get to Know Jay the Awesome Doggo</header>
+            <h1>An interactive gallery</h1>
+        </div>
+
+        <!-- Image of Jay -->
+        <div class="RightImage">
+            <img src="JaySmilesCutout.png" alt="">
+        </div>
+
+
+    </div>
+
+    <section id="About" class="about-Jay-section">
+        <h2>About Jay</h2>
+        <p>
+            Jay is a golden labrador retriever, the color of sunrays, he lights up any room he is in with his happy and adorable energy. This video gallery is dedicated to showcase some of those adorable moments.
+        </p>
+
+    </section>
+
+
+    <div id="grad1"></div>
+    <!-- this is showing the color fading from red to yellow at the bottom -->
+
+
+ <!-- Cointainer for the image gallery here -->
+     <div id="Gallery" class="Imagecontainer">
+
+
+        <!-- full width images with number text -->
+         <!-- 1 -->
+         <div class="JaySlidesImages">
+            <div class="numbertext">1 / 12</div>
+           <img src="AnOutsideJay.jpg">
+         </div>
+
+         <!-- 2 -->
+        <div class="JaySlidesImages">
+            <div class="numbertext">2 / 12</div>
+           <img src="1SunBathJay.jpg">
+         </div>
+
+          <!-- 3 -->
+        <div class="JaySlidesImages">
+            <div class="numbertext">3 / 12</div>
+           <img src="SunnyDog.jpg">
+         </div>
+
+            <!-- 4 -->
+        <div class="JaySlidesImages">
+            <div class="numbertext">4 / 12</div>
+           <img src="SunnyDog2.jpg">
+         </div>
+
+         <!-- 5 -->
+         <div class="JaySlidesImages">
+            <div class="numbertext">5 / 12</div>
+           <img src="SunnyJay.jpg">
+         </div>
+
+         <!-- 6 -->
+         <div class="JaySlidesImages">
+            <div class="numbertext">6 / 12</div>
+           <img src="WideSmileJay.jpg">
+         </div>
+          <!-- 7 -->
+         <div class="JaySlidesImages">
+            <div class="numbertext">7 / 12</div>
+           <img src="CookieDog.jpg">
+         </div>
+          <!-- 8 -->
+         <div class="JaySlidesImages">
+            <div class="numbertext">8 / 12</div>
+           <img src="HappiJaySun.jpg">
+         </div>
+          <!-- 9 -->
+         <div class="JaySlidesImages">
+            <div class="numbertext">9 / 12</div>
+           <img src="Jay.jpg">
+         </div>
+         <!-- 10 -->
+         <div class="JaySlidesImages">
+            <div class="numbertext">10 / 12</div>
+           <img src="SillyJay.jpg">
+         </div>
+         <!-- 11 -->
+         <div class="JaySlidesImages">
+            <div class="numbertext">11 / 12</div>
+           <img src="BabyJay0.jpg">
+         </div>
+         <!-- 12 -->
+         <div class="JaySlidesImages">
+            <div class="numbertext">12 / 12</div>
+           <img src="babyeepypupJay.jpg">
+         </div>
+
+         <!-- Next and previous buttons -->
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+
+
+
+         </div>
+
+         
+
+         <!-- image text//Captions -->
+          <div class="caption-container">
+            <p id="caption"></p>
+
+          </div>
+
+          <!-- Thumbnail Images -->
+           <div class="row">
+           <div class="column">
+           <img class= "demo cursor" src="AnOutsideJay.jpg" style="width:100%" onclick="currentSlide(1)" alt="Jay Outside">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="1SunBathJay.jpg" style="width:100%" onclick="currentSlide(2)" alt="Jay Is being mischievious here">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="SunnyDog.jpg" style="width:100%" onclick="currentSlide(3)" alt="Jay being Smiley">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="SunnyDog2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Jays Good Angle (he has no bad ones)">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="SunnyJay.jpg" style="width:100%" onclick="currentSlide(5)" alt="Candid Jay photo (rare)">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="WideSmileJay.jpg" style="width:100%" onclick="currentSlide(6)" alt="Jay is happy to see you">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="CookieDog.jpg" style="width:100%" onclick="currentSlide(7)" alt="Jay cant have the cookie (dw he got his own soon after)">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="HappiJaySun.jpg" style="width:100%" onclick="currentSlide(8)" alt="Jay enjoys the sun very much">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="Jay.jpg" style="width:100%" onclick="currentSlide(9)" alt="Jay laying down, his favorite past-time">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="SillyJay.jpg" style="width:100%" onclick="currentSlide(10)" alt="Jay is so silly sometimes">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="BabyJay0.jpg" style="width:100%" onclick="currentSlide(11)" alt="Jay as a baby puppy">
+           </div>
+           <div class="column">
+           <img class= "demo cursor" src="babyeepypupJay.jpg" style="width:100%" onclick="currentSlide(12)" alt="Jay the day we first saw him <3">
+           </div>
+
+
+     </div>
+
+    <div style="clear: both;"></div>  <!-- trying to separate thumbnails from decorations and video -->
+
+     <div id="Video" class="StarsDecor">
+       <img src="five-stars.png" alt="">
+       <img src="five-stars.png" alt="">
+       <img src="five-stars.png" alt="">
+    </div>
+
+     <!-- <div class="StarsDecoration" style="top: 2850px; right: 25px;">
+            <img src="five-stars.png" alt="">
+        </div>
+         <div class="StarsDecoration" style="top: 2850px; left: 25px;">
+            <img src="five-stars.png" alt="">
+        </div>
+         <div class="StarsDecoration" style="top: 2850px; left: 25px; right: 25px;">
+            <img src="five-stars.png" alt="">
+        </div> -->
+
+
+        <!--I really wanted to add a video to the end of my site so i used W3 schools as reference https://www.w3schools.com/howto/howto_css_fullscreen_video.asp -->
+        <div class="Jay-Video">
+            <h2 class="video-title"> You made it to the end!! Give Jay a star treat for being a good boy!!</h2>
+                <video controls>
+                    <source src="JayStars.mp4" type="video/mp4">
+                </video>
+
+           </div>
+
+           <!-- trying to add separation through gradients? -->
+           <div id="grad3"></div>
+
+     <!-- Load the Javascript at the end so DOM exists -->
+      <script src="./SlideTrial.js"></script>
+
+
+
+</body>
+
+</html>

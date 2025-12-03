@@ -1,0 +1,476 @@
+/* i tried using gradients for the first time, got my references from here 
+https://www.w3schools.com/css/css3_gradients.asp*/
+
+body { 
+    background-color:#4D0E1C;
+   /* background-image: linear-gradient(to bottom,#4D0E1C,#FAFFCDAB);  
+   this looks strange so i removed it
+   */
+    
+
+}
+
+/* separates my main page into sections (easier to work with) */
+.layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200px;
+    padding-top: 0;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* introducing buttons here */
+.LeftNav ul li a {
+    display: block;
+    color:#4D0E1C;
+    background: #A67B7B;
+    border: 3px solid #4D0E1C;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-decoration: dotted;
+
+    font-family:"Indie Flower";
+    font-size: 28px;
+}
+
+/* adding spacing to buttons here */
+.LeftNav ul {
+    list-style: none;
+    padding:0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    
+}
+.LeftNav ul li a:hover {
+transform: scale(1.03);
+}
+
+/* the main box surrounding all 4 navbuttons */
+.NavBox {
+    padding: 40px;
+    border-radius: 20px;
+    background:bisque;
+}
+
+
+    
+
+.CenterColumn {
+    max-width: 400px;
+    /* text-align: center; i did not like the look of this, but its an option*/
+}
+
+/* h1--Subtitilte:Interactive Gallery */
+h1 {
+    font-size: 25px;
+    font-family: "Indie Flower";
+    color: #faffcdab;
+    margin-top: 25px;
+    margin-left: 200px;
+    margin-right: 30px;
+    font-weight: 100;
+
+}
+#heading{
+    color:bisque;
+    font-family:"Irish Grover";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal; 
+    margin-top: 100px; /*this moves my main title down*/
+    margin-left: 100px;
+    }
+
+/* this is all going to be css for the circle and dog */
+.RightImage {
+    position: relative;
+    margin: 50px;
+}
+
+.RightImage img {
+    position: relative;
+    z-index: 2;
+    width: 420px;
+    margin-left: 100px; /*moves circle to the left*/
+}
+
+.RightImage::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background:bisque;
+    border-radius: 50%;
+    top: 19%;
+    left: 35%;
+    transform: translate(-50%,-5%);
+    z-index: 1;
+    
+    
+}
+
+/* this is where css for the circle and dog ends*/
+/* StarDecor */
+.DecorationImage {
+    position: absolute;
+    width: 20px;
+    height: auto;
+    top: 0;
+    right: 10px;
+    z-index: 9999;
+   
+}
+/* ImageDecoration styling/size/etc */
+.DecorationImage img {
+    width: 90px;
+    margin-top: 20px;
+    margin-left: -150px;
+}
+ /* struggling with stars decoration placements */
+.StarsDecoration {
+    position: absolute;
+    width: auto;
+    z-index: 9999;
+    pointer-events: none;
+
+}
+.StarsDecoration img {
+    width: 590px;
+
+    /* decided to just put it into the html in the end */
+}  
+
+.StarsDecor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 50px 0;
+    padding: 20px 0;
+}
+
+.StarsDecor img {
+    width: 450px;
+    height: auto;
+}
+
+
+
+/* AT THIS POINT ONWARDS ITS ALL CSS FOR THE SLIDES */
+
+/* *i hid slides by default
+    *positioned the arrows that affect the slides
+    *made thumbnails hover effects
+    *styled caption box 
+    https://www.w3schools.com/howto/howto_css_thumbnail.asp*/
+
+
+* {
+    box-sizing:border-box;
+}
+
+/*positionioning of the image cointainer (needed to position the left and right arrows) */
+.Imagecontainer {
+   height: 70vh;
+   max-height: 600px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/*hide the imagees by default */
+.JaySlidesImages {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    background-image: linear-gradient(to bottom,#4D0E1C,#fffacdcb);
+  
+}
+
+/* this fits the Jay images properly on the slideshow */
+.JaySlidesImages img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/*Added a cursor when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/*Next and Previous ARROW Buttons*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding:16px;
+    top: 50%;
+    transform:translateY(-50%) ;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* webkit user select is non standard, i will have too come back to this, W3 schools did this?? */
+
+/* position the "next button" to the right */
+.next {
+    right:0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*on hover, add a background color that is just a little bit see thorugh */
+.prev:hover,
+.next:hover {
+    background-color: #4D0E1C;
+}
+
+
+/*Number-text(1/12 etc)*/
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding:8px 12px;
+    position: absolute;
+    top: 0;
+    
+}
+
+/* Cointainer for image text */
+.caption-container {
+    text-align: center;
+    background-color: #4D0E1C;
+    padding: 2px 16px;
+    color:bisque
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Six colums side by side*/
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for (thumbnail) images*/
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+
+/*Video CSS here*/
+
+
+.Jay-Video {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.Jay-Video video {
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #A67B7B;
+    margin-bottom: 140px;
+    margin-top: 10px;
+}
+
+.video-title {
+    text-align: center;
+    color: #A67B7B;
+    font-family: "Irish Grover";
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 120px;
+}
+
+ 
+/*this is the CSS for the ABOUT JAY section */
+
+.about-Jay-section {
+    width: 100%;
+    text-align: center;
+    top: 0;
+    padding: 60px 0px; /*//spaces from text */
+    position: relative;
+    z-index: 10; 
+}
+
+.about-Jay-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color:bisque
+}
+
+.about-Jay-section p {
+    max-width: 700px;
+    margin: 0 auto; /*centers the paragraph*/
+    color: #A67B7B;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+/* //gradients...im not sure if i should keep that top one ?? */
+#grad1 {
+  height: 100px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom,#4D0E1C,#fffacdcb);
+}
+
+#grad2 {
+  height: 150px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom,#fffacdcb,#4D0E1C);
+}
+#grad3 {
+  height: 350px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom,#4D0E1C,#fffacdcb);
+}
+
+
+/* this fixes elements being squished when the page shrinks, struggled alot with making the page mobile responsive.. especially with the slideshow/stars */
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    /* These will align the headers to always remain in the middle whenever the siz eof the page changes */
+
+    h1 {
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+
+    }
+    
+    #heading {
+        font-size: 44px;
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .CenterColumn {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+
+   /*  working on getting the navigation to be responsive with the next 2  */
+
+    .NavBox {
+        bottom: 50px;
+        top: 10px;
+        padding: 20px;
+    }
+
+    .LeftNav ul li a {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    /* Jay home image mobile ver. */
+
+    .RightImage img {
+        width: 300px;
+        margin-left: 0;
+    }
+
+    .RightImage::before {
+        width: 260px;
+        height: 260px;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%,-5%); /*This should make it stay in the middle*/
+    }
+
+    .Imagecontainer {
+        height: 50vh;
+        max-height: 420px;
+    }
+    .JaySlidesImages {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .JaySlidesImages img {
+        object-fit: contain;
+    }
+
+
+
+    .column {
+        float: left;
+        width: 50%; /*I cut the 6 slide rows into only showing 2 thumbnails when shrunken onto smaller screens */
+        
+    }
+    .row {
+            margin-top: 12px;
+        }
+
+/* 
+ im unsure how to take a look at the stars here, will come back to this*/
+        .StarsDecoration img {
+            width: 120%;
+        }
+
+
+        .Jay-Video video {
+            width: 95%;
+            margin-bottom: 60%;
+        }
+        .video-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+.caption-container {
+    padding: 8px 12px;
+}
+
+    
+}
